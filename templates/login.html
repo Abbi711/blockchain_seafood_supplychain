@@ -1,0 +1,36 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+{% block content %}
+<br>
+<Centre>
+<h3> Enter Login Credentials</h3>
+	<form action="{{node_address}}/authenticate" id="textform" method="post">
+           User Type: <select name="s1">
+           <option value="LDC"> LDC </option>
+           <option value="Retailer"> Retailer </option>
+           <option value="Producer"> Producer </option>
+           <option value="Miner"> Miner </option>
+           <option value="NetworkAdmin"> Network Admin </option>
+</select>
+	   User Name: <input type="text" name="uname"> <br>
+	   Password: <input type="password" name="pwd" id="password"> <br>
+<input type="submit" value="Post">
+	</form>
+	</Centre>
+	<br>
+	<style>
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}
