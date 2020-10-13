@@ -1,0 +1,39 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+{% block content %}
+	<br>
+<Centre>
+<h1> Enter details of the New Batch: </h1>
+	<form action="/addnewbatch" id="textform" method="post">
+Producer name: <input type="text" name="producer"> <br>
+   Product Name: <select name="name">
+{% for worker in product %} 
+<option value="{{worker[0]}}">{{worker[0]}}</option>
+{% endfor %} <br> </select>
+           Product type: <input type="text" name="ptype"> <br>
+           
+           Weight: <input type="text" name="weight"> <br> 
+<input type="submit" value="ADD">
+	</form>
+<form action="/backaddbatch">
+<input type="submit" value="BACK"> </form>
+</Centre>
+<br>
+<div style="margin: 20px;"> 
+	<style>
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}
+
