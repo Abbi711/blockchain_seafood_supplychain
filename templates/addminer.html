@@ -1,0 +1,38 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+{% block content %}
+	<br>
+		<Centre>
+<h1> Enter details of the Miner: </h1>
+	<form action="/addminer" id="textform" method="post">
+	   Name: <input type="text" name="name"> <br>
+                      UserName: <input type="text" name="username"> <br>
+           Set Password: <input type="password" name="password" id="password"> <br>         
+	    <input type="submit" value="ADD">
+	</form>
+   <form action="/backminer">
+<input type="submit" value="BACK"> </form>
+	</Centre>
+	<br>
+       
+	
+	
+	<div style="margin: 20px;">
+	<style>		
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}
+
+
